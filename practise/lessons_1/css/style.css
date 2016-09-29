@@ -1,0 +1,109 @@
+body {
+    background-color: rgb(255,255,255);
+
+}
+.container {
+    width: 980px;
+    margin: 0 auto;
+}
+.header {
+    height: 90px;
+}
+.header-logo-icon {
+    display: block;
+    width: 128px;
+    height: 35px;
+    background: url("../images/sprite.png");
+    margin: 35px 0 0 20px;
+    float: left;
+}
+.board {
+    background: url("../images/bord.jpg") center center;
+    height: 633px;
+    position: relative;
+}
+.board-container {
+    position: relative;
+    top: 200px;
+}
+.board-title, .board-about {
+    text-align: center;
+    color: white;
+}
+.board-title {
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+.board-about {
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 580px;
+    font-size: 16px;
+    margin: 30px auto 0;
+    line-height: 1.7em;
+}
+.services-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    margin: 75px 20px 35px 20px;
+}
+.services-list {
+    margin: 0 0 50px 20px;
+}
+.services-list li {
+    position: relative;
+    padding-left: 30px;
+    line-height: 1.6em;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    width: 410px;
+}
+.services-list li:before {
+    content: " ";
+    background: url("../images/sprite.png") no-repeat -64px -40px transparent;
+    height: 10px;
+    width: 10px;
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 0px;
+}
+.features {
+    background-color: rgb(246, 250, 252);
+    overflow: hidden;
+}
+.features-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin: 50px 0;
+
+}
+.columns {
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+}
+.column-left {
+    margin: 0 90px 60px 20px;
+}
+.item-icon-text {
+    margin-bottom: 20px;
+}
+.features-description {
+    width: 420px;
+    line-height: 1.6em;
+}
+.item-icon-text i{
+    height: 19px;
+    width: 19px;
+    display: block;
+    float: left;
+    margin-right: 15px;
+}
+.column-left .item-icon-text i {
+    background: transparent url("../images/sprite.png") no-repeat scroll 0px -42px;
+}
+.column-right .item-icon-text i {
+    background: transparent url("../images/sprite.png") no-repeat scroll -22px -40px;
+}
