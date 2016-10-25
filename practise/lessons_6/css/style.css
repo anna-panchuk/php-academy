@@ -1,0 +1,49 @@
+body {
+    background: #010101;
+}
+.container {
+    width: 980px;
+    margin: 0 auto;
+}
+.logs-wrapper textarea {
+    resize: none;
+    height: 65px;
+    font-size: 20px;
+    margin: 0 auto;
+    width: 400px;
+    display: block;
+    background: #010101;
+    border: none;
+    color: #83b830;
+}
+.battleship-field {
+    margin: 20px auto 0px;
+    border-collapse: collapse;
+    color: #83b830;
+}
+.battleship-field td {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px #83b830 solid;
+}
+.battleship-field .no-border, .no-border-row td {
+    border: none;
+}
+.data-form {
+    width: 230px;
+    float: right;
+}
+.data-shot {
+    width: 170px;
+    margin-bottom: 10px;
+    border: 1px #137dc1 solid;
+    border-radius: 3px;
+}
+.data-button {
+    background: #137dc1;
+    border: #137dc1;
+    border-radius: 2px;
+    color: #ffffff;
+    width: 85px;
+}
