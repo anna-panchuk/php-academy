@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Battleship_2D</title>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
     <script src="js/battleship_2D.js"></script>
 </head>
 <body>
@@ -14,90 +18,85 @@
         <table class="battleship-field">
             <tr>
                 <td class="no-border">A</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td data-x="0" data-y="0"></td>
+                <td data-x="1" data-y="0"></td>
+                <td data-x="2" data-y="0"></td>
+                <td data-x="3" data-y="0"></td>
+                <td data-x="4" data-y="0"></td>
+                <td data-x="5" data-y="0"></td>
+                <td data-x="6" data-y="0"></td>
             </tr>
             <tr>
                 <td class="no-border">B</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td data-x="0" data-y="1"></td>
+                <td data-x="1" data-y="1"></td>
+                <td data-x="2" data-y="1"></td>
+                <td data-x="3" data-y="1"></td>
+                <td data-x="4" data-y="1"></td>
+                <td data-x="5" data-y="1"></td>
+                <td data-x="6" data-y="1"></td>
             </tr>
             <tr>
                 <td class="no-border">C</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td data-x="0" data-y="2"></td>
+                <td data-x="1" data-y="2"></td>
+                <td data-x="2" data-y="2"></td>
+                <td data-x="3" data-y="2"></td>
+                <td data-x="4" data-y="2"></td>
+                <td data-x="5" data-y="2"></td>
+                <td data-x="6" data-y="2"></td>
             </tr>
             <tr>
                 <td class="no-border">D</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td data-x="0" data-y="3"></td>
+                <td data-x="1" data-y="3"></td>
+                <td data-x="2" data-y="3"></td>
+                <td data-x="3" data-y="3"></td>
+                <td data-x="4" data-y="3"></td>
+                <td data-x="5" data-y="3"></td>
+                <td data-x="6" data-y="3"></td>
             </tr>
             <tr>
                 <td class="no-border">E</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td data-x="0" data-y="4"></td>
+                <td data-x="1" data-y="4"></td>
+                <td data-x="2" data-y="4"></td>
+                <td data-x="3" data-y="4"></td>
+                <td data-x="4" data-y="4"></td>
+                <td data-x="5" data-y="4"></td>
+                <td data-x="6" data-y="4"></td>
             </tr>
             <tr>
                 <td class="no-border">F</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td data-x="0" data-y="5"></td>
+                <td data-x="1" data-y="5"></td>
+                <td data-x="2" data-y="5"></td>
+                <td data-x="3" data-y="5"></td>
+                <td data-x="4" data-y="5"></td>
+                <td data-x="5" data-y="5"></td>
+                <td data-x="6" data-y="5"></td>
             </tr>
             <tr>
                 <td class="no-border">G</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td data-x="0" data-y="6"></td>
+                <td data-x="1" data-y="6"></td>
+                <td data-x="2" data-y="6"></td>
+                <td data-x="3" data-y="6"></td>
+                <td data-x="4" data-y="6"></td>
+                <td data-x="5" data-y="6"></td>
+                <td data-x="6" data-y="6"></td>
             </tr>
             <tr  class="no-border-row">
-                <td></td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
+                <td class="js-no-click"></td>
+                <td class="js-no-click">1</td>
+                <td class="js-no-click">2</td>
+                <td class="js-no-click">3</td>
+                <td class="js-no-click">4</td>
+                <td class="js-no-click">5</td>
+                <td class="js-no-click">6</td>
+                <td class="js-no-click">7</td>
             </tr>
         </table>
-    <form class="data-form">
-        <input class="data-shot" id="shotinput" type="text" size="40" placeholder="Введите от А1 до G7">
-        <input class="data-button" id="shotbtn" type="submit" value="Огонь">
-        <input class="data-button" type="reset" value="Отмена">
-    </form>
 </div>
 </body>
 </html>

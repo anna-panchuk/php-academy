@@ -1,6 +1,7 @@
 "use strict";
 
-window.onload = onLoad;
+//window.onload = onLoad;
+$(document).ready(onLoad);
 
 function onLoad() {
     function shot(cellX, cellY) {
@@ -12,39 +13,46 @@ function onLoad() {
             } else {
                 fieldCheck[cellX][cellY] = false;
             }
+            return fieldCheck[cellX][cellY];
+        }
+
+        return null;
+    }
+
+    function isWinner() {
+        if (successCounter == 3) {
+            var isRestsrt = confirm("Вы виграли!!! Хотите с играть снова?");
+            if (isRestsrt) {
+                location.reload();
+            }
+
         }
     }
 
     var field = [], fieldCheck = [],
-        shotBtn = document.getElementById("shotbtn"),
-        shotInput = document.getElementById("shotinput"),
-        logs = document.getElementById("logs"),
+        $logs = $("#logs"),
         charsArray = ["A", "B", "C", "D", "E", "F", "G"],
         counter = 0,
         successCounter = 0;
-
-
-    shotBtn.onclick = function () {
-        if (shotInput.value.length != 2
-            || charsArray.indexOf(shotInput.value[0]) == -1
-            || isNaN(shotInput.value[1])  || shotInput.value[1] < 1 || shotInput.value[1] > 7
-        ) {
-            //alert("Введите правильно!");
-            logs.value = "Вы ввели не коректно: '" + shotInput.value + "'\n" + logs.value;
-            shotInput.value = "";
-
-            return false;
+    $logs.val("");
+    
+    $(".battleship-field td:not(.no-border, .js-no-click)").click(function (e) {
+       var $this = $(this),
+           x = $this.data("x"),
+           y = $this.data("y"),
+           shotResult = shot(x, y);
+        if (shotResult) {
+            $logs.val("Вы попали: '" + charsArray[x] + (parseInt(y) + 1) + "'\n" + $logs.val());
+            $this.text("x");
+        } else if (shotResult === false) {
+            $logs.val("Вы не попали: '"  + charsArray[x] + (parseInt(y) + 1) + "'\n" + $logs.val());
+            $this.text("-");
+        } else {
+            $logs.val("Вы уже стреляли в эту ячейку: '"  + charsArray[x] + (parseInt(y) + 1) + "'\n" + $logs.val());
         }
-
-        var x = charsArray.indexOf(shotInput.value[0]),
-            y = shotInput.value[1] - 1;
-        shot(x, y);
-        shotInput.value = "";
-        console.log(fieldCheck);
-
-        return false;
-    }
-
+        isWinner();
+    });
+    
     for (var i = 0; i < 7; i++) {
         field[i] = [];
         fieldCheck[i] = [];
@@ -54,9 +62,9 @@ function onLoad() {
         }
     }
 
-    field[3][2] = true;
-    field[3][3] = true;
-    field[3][4] = true;
+    field[0][0] = true;
+    field[0][1] = true;
+    field[0][2] = true;
 
 }
 
