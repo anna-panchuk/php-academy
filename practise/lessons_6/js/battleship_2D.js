@@ -21,7 +21,7 @@ function onLoad() {
 
     function isWinner() {
         if (successCounter == 3) {
-            var isRestsrt = confirm("Вы виграли!!! Хотите с играть снова?");
+            let isRestsrt = confirm("Вы виграли!!! Хотите с играть снова?");
             if (isRestsrt) {
                 location.reload();
             }
@@ -29,15 +29,15 @@ function onLoad() {
         }
     }
 
-    var field = [], fieldCheck = [],
+    let field = [], fieldCheck = [],
         $logs = $("#logs"),
         charsArray = ["A", "B", "C", "D", "E", "F", "G"],
         counter = 0,
         successCounter = 0;
     $logs.val("");
     
-    $(".battleship-field td:not(.no-border, .js-no-click)").click(function (e) {
-       var $this = $(this),
+    $(".battleship-field td:not(.no-border, .js-no-click)").click((e) => {
+       let $this = $(e.currentTarget),
            x = $this.data("x"),
            y = $this.data("y"),
            shotResult = shot(x, y);
@@ -53,10 +53,10 @@ function onLoad() {
         isWinner();
     });
     
-    for (var i = 0; i < 7; i++) {
+    for (let i = 0; i < 7; i++) {
         field[i] = [];
         fieldCheck[i] = [];
-        for (var j = 0; j < 7; j++) {
+        for (let j = 0; j < 7; j++) {
             field[i][j] = false;
             fieldCheck[i][j] = null;
         }
