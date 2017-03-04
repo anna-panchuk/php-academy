@@ -9,11 +9,12 @@ const AuthorsList = ({authors}) => {
             <th>ID</th>
             <th>First name</th>
             <th>Last name</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
     {authors.map(author => {
-        return <AuthorsListRow key={author.id} author={author}/>
+        return <AuthorsListRow key={author.id} author={author} />
 })
 }
 </tbody>

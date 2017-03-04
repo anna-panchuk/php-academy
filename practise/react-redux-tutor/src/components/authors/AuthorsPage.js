@@ -7,13 +7,27 @@ import * as authorActions from '../../actions/authorActions'
 
 
 class AuthorsPage extends React.Component {
+    constructor(props, context) {
+        super(props, context)
 
+        this.redirectToCreateForm = this.redirectToCreateForm.bind(this)
+      }
+
+      redirectToCreateForm() {
+        browserHistory.push('/create-author')
+      }
     render() {
+
         const {authors} = this.props
         return (
             <div className="AuthorsList">
             <h2>Authors</h2>
-
+            <input
+              className="btn btn-primary"
+              type="submit"
+              value='Add Author'
+              onClick={this.redirectToCreateForm}
+            />
     <AuthorsList authors={authors}/>
             </div>
     );

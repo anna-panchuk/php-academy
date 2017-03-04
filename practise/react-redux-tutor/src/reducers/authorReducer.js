@@ -6,10 +6,13 @@ export default function(state = initialState.authors, action) {
     case types.LOAD_AUTHORS_SUCCESS:
       return action.authors
     case types.UPDATE_AUTHOR_SUCCESS:
-      debugger;
       return [
               ...state.filter(author => author.id !== action.author.id),
       Object.assign(action.author)
+    ]
+    case types.REMOVE_AUTHOR_SUCCESS:
+      return [
+              ...state.filter(author => author.id !== action.authorId)
     ]
     default:
       return state;

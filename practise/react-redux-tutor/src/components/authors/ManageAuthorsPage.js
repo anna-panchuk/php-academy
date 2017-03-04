@@ -64,13 +64,13 @@ const getAuthorById = (authors, authorId) => {
 }
 
 function mapStateToProps(state, ownProps) {
-
-    let emptyAuthor = {id: "", lastName: "", firstName: ""}
+    let author = {id: "", lastName: "", firstName: ""}
 
     const authorId = ownProps.params.id
 
     if (authorId) {
         author = getAuthorById(state.authors, authorId)
+        let emptyAuthor = {id: "", lastName: "", firstName: ""}
         author = author ? author : emptyAuthor
     }
 

@@ -13,7 +13,6 @@ class CoursesPage extends React.Component {
     this.redirectToCreateForm = this.redirectToCreateForm.bind(this)
   }
 
-  //using browserHistory component of router we can initiate changing of route
   redirectToCreateForm() {
     browserHistory.push('/create-course')
   }
