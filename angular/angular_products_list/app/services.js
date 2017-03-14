@@ -6,9 +6,9 @@
 
     function modelOperations() {
         var data = [
-            {author: "Author first", name: "Course first"},
-            {author: "Author second", name: "Course second"},
-            {author: "Author third", name: "Course third"}
+            {author: "Author first", name: "Course first", date:1489276800},
+            {author: "Author second", name: "Course second", date:1489276800},
+            {author: "Author third", name: "Course third", date:1489276800}
         ];
         return {
             getModel: function() {

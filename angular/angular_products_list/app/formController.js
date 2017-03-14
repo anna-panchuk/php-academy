@@ -5,10 +5,11 @@
 
     function formController($scope, modelOperations) {
         $scope.addItem = addItem;
+        $scope.buttonText = "Add";
 
-        function addItem(name, author) {
-            modelOperations.addLineModel({name: name, author: author});
-            console.log($scope.name);
+        function addItem(scopeVm) {
+            var timestamp = Math.round(new Date(scopeVm.date).getTime() / 1000);
+            modelOperations.addLineModel({name: scopeVm.name, author: scopeVm.author, date: timestamp});
         }
     }
 })();

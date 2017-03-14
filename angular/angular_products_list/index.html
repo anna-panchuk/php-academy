@@ -12,40 +12,33 @@
     <script src="app/coursesController.js"></script>
     <script src="app/formController.js"></script>
     <script src="app/services.js"></script>
+    <script src="app/courseForm.directive.js"></script>
+    <script src="app/timestamp.filtr.js"></script>
 
 </head>
 <body>
     <div class="container">
         <h1>Courses</h1>
         <div class="panel">
+
             <div class="form-inline" ng-controller="FormController">
-                <div class="form-group">
-                    <div class="col-md-8">
-                        <input class="form-control" ng-model="name" placeholder = "Courses name" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-6">
-                        <input class="form-control" ng-model="author" placeholder="Author" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-8">
-                        <button class="btn btn-default" ng-click="addItem(name, author)">Add</button>
-                    </div>
-                </div>
+                <course-form action="addItem" button-text="buttonText"></course-form>
+
             </div>
             <table class="table table-striped" ng-controller="CoursesController">
                 <thead>
                 <tr>
                     <th>Course name</th>
                     <th>Author</th>
+                    <th>Date</th>
+
                 </tr>
                 </thead>
                 <tbody>
                 <tr ng-repeat="item in list.items">
                     <td>{{item.name}}</td>
                     <td>{{item.author}}</td>
+                    <td>{{item.date | timestamp | date:'yyyy-MM-dd'}}</td>
                 </tr>
                 </tbody>
             </table>

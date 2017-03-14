@@ -1,0 +1,22 @@
+<form name="vm.courseForm">
+    <div class="form-group">
+        <div class="col-md-8">
+            <input class="form-control" ng-model="vm.name" required placeholder = "Courses name" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-6">
+            <input class="form-control" ng-model="vm.author" required placeholder="Author" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-6">
+            <input class="form-control" ng-model="vm.date" required  ng-pattern="/\d\d/\d\d/\d\d\d\d/" placeholder="Date" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-8">
+            <button ng-disabled="vm.courseForm.$invalid" class="btn btn-default" ng-click="action(vm)">{{ buttonText }}</button>
+        </div>
+    </div>
+</form>
