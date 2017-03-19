@@ -1,0 +1,27 @@
+{
+  "name": "material",
+  "version": "1.1.0",
+  "dependencies": {
+    "jquery": "~2.2.4",
+    "angular": "~1.5.7",
+    "angular-animate": "~1.5.7",
+    "angular-aria": "~1.5.7",
+    "angular-messages": "^1.5.7",
+    "angular-ui-router": "^0.3.1",
+    "angular-scroll": "~1.0.0",
+    "jquery.slimscroll": "~1.3.8",
+    "textAngular": "~1.5.12",
+    "angular-wizard": "^0.9.0",
+    "angular-validation-match": "^1.9.0",
+    "angular-material-data-table": "^0.10.9"
+  },
+  "devDependencies": {
+    "bootstrap-sass-official": "~3.3.7",
+    "bootstrap": "~3.3.7",
+    "material-design-lite": "~1.2.0"
+  },
+  "resolutions": {
+    "angular": "~1.5.7",
+    "jquery": "^2.2.4"
+  }
+}
