@@ -17,6 +17,9 @@
             },
             editLineModel: function(id, line) {
                 return $http.post('/edit-line/' + id, line);
+            },
+            deleteLine: function (id) {
+                return $http.post('/delete-line/' + id);
             }
         }
     }

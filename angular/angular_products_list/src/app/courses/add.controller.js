@@ -7,10 +7,15 @@
         var vm = this;
         vm.addItem = addItem;
         vm.buttonText = "Add";
+        vm.course = {name: '', date: '', author: ''};
 
-        function addItem(scopeVm) {
-            var timestamp = Math.round(new Date(scopeVm.date).getTime() / 1000);
-            var line = {name: scopeVm.name, author: scopeVm.author, date: timestamp};
+        function addItem() {
+            var timestamp = Math.round(new Date(vm.course.date).getTime() / 1000);
+            var line = {
+                name: vm.course.name,
+                author: vm.course.author,
+                date: timestamp
+            };
             modelOperations.addLineModel(line).then(function(){
                 $state.go('coursesList');
             });

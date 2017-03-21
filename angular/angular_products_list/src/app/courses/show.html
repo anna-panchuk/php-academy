@@ -2,6 +2,7 @@
     <h1>{{ vm.course.name }}</h1>
     <div class="panel">
         <a ui-sref="coursesEdit({id: vm.course.id})" class="btn btn-primary">Edit</a>
+        <a ui-sref="coursesDelete({id: vm.course.id})" class="btn btn-danger">Delete</a>
 
         <table class="table table-striped">
             <tbody>

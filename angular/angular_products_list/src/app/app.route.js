@@ -32,6 +32,12 @@
                         controller: "ShowCoursesController",
                         controllerAs: "vm"
                     })
+                    .state('coursesDelete', {
+                        url: '/delete/:id',
+                        template: "",
+                        controller: "DeleteCoursesController",
+                        controllerAs: "vm"
+                    })
                 ;
 
             }

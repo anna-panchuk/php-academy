@@ -8,7 +8,7 @@
         vm.id = $stateParams.id;
         vm.editItem = editItem;
         vm.buttonText = "Edit";
-        vm.course = {name: '', date: 0, author: ''};
+        vm.course = {name: '', date: '', author: ''};
 
         modelOperations.getItem(vm.id).then(showItem);
 

@@ -69,6 +69,25 @@ app.get('/get-line/:id', function(req, res) {
     res.send('{}');
 });
 
+app.post('/delete-line/:id', function(req, res) {
+    var id = req.params.id;
+    var data = jsonfile.readFileSync(jsonFilePath);
+
+    if (data.length) {
+        var i;
+        for(i = 0; i < data.length; i++) {
+            if (data[i].id == id) {
+                data.splice(i, 1);
+                jsonfile.writeFileSync(jsonFilePath, data);
+                break;
+            }
+        }
+    }
+
+    res.send('{"status":1}');
+});
+
+
 app.get('/', function(req, res) {
      res.sendFile(path.join(__dirname, '../index.html'));
 });
