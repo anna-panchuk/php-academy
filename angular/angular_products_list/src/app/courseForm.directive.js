@@ -8,7 +8,8 @@
             templateUrl: "app/template/courseForm.html",
             scope: {
                 action: "=action",
-                buttonText: "=buttonText"
+                buttonText: "=buttonText",
+                course: "=course"
             },
             controllerAs: 'vm'
         }

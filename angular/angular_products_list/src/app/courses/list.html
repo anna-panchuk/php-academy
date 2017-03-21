@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Courses</h1>
+    <div class="panel">
+        <a ui-sref="coursesAdd" class="btn btn-success">Add course</a>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Course name</th>
+                <th>Author</th>
+                <th>Date</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in vm.list.items">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.author}}</td>
+                    <td>{{item.date | timestamp | date:'yyyy-MM-dd'}}</td>
+                    <td>
+                        <a ui-sref="coursesShow({id: item.id})" class="btn btn-default">Show</a>
+                        <a ui-sref="coursesEdit({id: item.id})" class="btn btn-primary">Edit</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,17 +1,18 @@
 (function () {
     "use strict";
     angular.module("app")
-        .controller("CoursesController", ["$scope", "modelOperations", coursesController]);
+        .controller("ListCoursesController", ["modelOperations", listCoursesController]);
 
-    function coursesController($scope, modelOperations) {
-        $scope.list = {
+    function listCoursesController(modelOperations) {
+        var vm = this;
+        vm.list = {
             items: []
-        }
-        $scope.addItem = addItem;
-        $scope.buttonText = "Add";
+        };
+        vm.addItem = addItem;
+        vm.buttonText = "Add";
 
         modelOperations.getModel().then(function(response){
-            $scope.list.items = response.data;
+            vm.list.items = response.data;
         })
 
         function addItem(scopeVm) {

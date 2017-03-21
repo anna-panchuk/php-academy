@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>{{ vm.course.name }}</h1>
+    <div class="panel">
+        <a ui-sref="coursesEdit({id: vm.course.id})" class="btn btn-primary">Edit</a>
+
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <td>ID</td>
+                    <td>{{ vm.course.id }}</td>
+                </tr>
+                <tr>
+                    <td>Course name</td>
+                    <td>{{ vm.course.name }}</td>
+                </tr>
+                <tr>
+                    <td>Author</td>
+                    <td>{{ vm.course.author }}</td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>{{ vm.course.date | timestamp | date:'yyyy-MM-dd' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

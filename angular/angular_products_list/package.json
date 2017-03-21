@@ -4,8 +4,7 @@
   "scripts": {
     "init": "npm install"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">=4.4.0"
   },
